@@ -1,0 +1,34 @@
+version = 1
+requires-python = ">=3.12"
+
+[manifest]
+members = [
+    "uv-workspace",
+    "workspace-getter",
+    "workspace-setter",
+]
+
+[[package]]
+name = "uv-workspace"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "workspace-getter" },
+    { name = "workspace-setter" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "workspace-getter", editable = "packages/workspace-getter" },
+    { name = "workspace-setter", editable = "packages/workspace-setter" },
+]
+
+[[package]]
+name = "workspace-getter"
+version = "0.1.0"
+source = { editable = "packages/workspace-getter" }
+
+[[package]]
+name = "workspace-setter"
+version = "0.1.0"
+source = { editable = "packages/workspace-setter" }

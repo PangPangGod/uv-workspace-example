@@ -1,0 +1,24 @@
+[project]
+name = "uv-workspace"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "PangPangGod", email = "rhcp1134@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "workspace-getter",
+    "workspace-setter",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.workspace]
+members = ["packages/workspace-getter", "packages/workspace-setter"]
+
+[tool.uv.sources]
+workspace-getter = { workspace = true }
+workspace-setter = { workspace = true }
